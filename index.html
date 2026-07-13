@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tariq Khalaf - Electrical & Computer Engineering Student at UNC Charlotte. Minimalist portfolio specializing in PCB Design, Embedded Systems, and Robotics.">
+    <title>Tariq Khalaf | E&CE Portfolio</title>
+
+    <!-- Favicon (inline monogram, matches site's black/white minimal look) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d0d0d'/%3E%3Ctext x='50' y='58' font-family='Arial, sans-serif' font-size='42' font-weight='700' fill='%23f2f2f2' text-anchor='middle'%3ETK%3C/text%3E%3C/svg%3E">
+
+    <!-- Open Graph / Social Sharing -->
+    <!-- og:image/twitter:image use a relative path; once this is deployed, swap in the full https:// URL so link previews on LinkedIn/Slack/iMessage can resolve it. -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tariq Khalaf | E&CE Portfolio">
+    <meta property="og:description" content="Electrical & Computer Engineering Student at UNC Charlotte. Minimalist portfolio specializing in PCB Design, Embedded Systems, and Robotics.">
+    <meta property="og:image" content="assets/hero.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tariq Khalaf | E&CE Portfolio">
+    <meta name="twitter:description" content="Electrical & Computer Engineering Student at UNC Charlotte. Minimalist portfolio specializing in PCB Design, Embedded Systems, and Robotics.">
+    <meta name="twitter:image" content="assets/hero.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Minimal Header -->
+    <header id="main-header" class="minimal-header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-symbol">T.K</span>
+            </a>
+            
+            <nav id="nav-menu" class="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#involvements" class="nav-link">Involvements</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="/resume.pdf" target="_blank" rel="noopener" class="nav-link">Resume</a></li>
+                    <li><a href="#contact" class="nav-link btn-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-container">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge-minimal">UNC Charlotte Engineering</div>
+                    <h1 class="hero-title">
+                        Tariq Khalaf
+                    </h1>
+                    <p class="hero-subtitle">
+                        Designing hardware, firmware, and electro-mechanical systems.
+                    </p>
+                    <p class="hero-description">
+                        BS in Electrical and Computer Engineering student at UNC Charlotte. Focused on low-level firmware in C/C++, multi-layer PCB routing in KiCad, and physical prototyping.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Projects</a>
+                        <a href="#contact" class="btn btn-outline">Connect</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="assets/hero.jpg" alt="Technical hardware design" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Line -->
+        <hr class="section-divider">
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">Dec 2028</div>
+                    <div class="stat-label">Graduation Expected</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">05+</div>
+                    <div class="stat-label">Engineering Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Lab Builds Supported</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- About & Skills Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="about-grid">
+                <div class="about-bio">
+                    <h2 class="section-title">Biography</h2>
+                    <p>I am a student at the University of North Carolina at Charlotte studying Electrical and Computer Engineering. My work centers on designing custom circuitry and programming microcontrollers to create functional physical products.</p>
+                    <p>I focus on hardware safety, thermal planning, and clean low-level firmware structures. I also participate in the UNC Charlotte Robotics Fighting Club, contributing to structural design and motor control workflows.</p>
+                    
+                    <div class="social-links-minimal">
+                        <a href="https://github.com/TariqKF" target="_blank" rel="noopener" class="social-link"><i data-lucide="github"></i> github.com/TariqKF</a>
+                        <a href="https://linkedin.com/in/TareqKF" target="_blank" rel="noopener" class="social-link"><i data-lucide="linkedin"></i> linkedin.com/in/TareqKF</a>
+                        <a href="mailto:TMKhalaf0@gmail.com" class="social-link"><i data-lucide="mail"></i> TMKhalaf0@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="about-skills">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-list">
+                        <div class="skill-category">
+                            <h3>Design & Simulation</h3>
+                            <p>KiCad, Fusion 360, AutoCAD, SolidWorks, PCB Layout, Circuit Diagrams, Meshmixer, 3D Printing</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Embedded Systems</h3>
+                            <p>C++, Python, Arduino, Embedded C, UART, PWM, I2C/SPI Protocols</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Hardware & Prototyping</h3>
+                            <p>Soldering, PCB Bring-up & Debugging, USB-C Power Delivery, Motor Control, Circuit Prototyping</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Experience Section (Core Expertise + Work History) -->
+        <section id="experience" class="expertise-section scroll-reveal">
+            <h2 class="section-title">Experience</h2>
+
+            <h3 class="subsection-title">Core Expertise</h3>
+            <div class="expertise-table">
+                <div class="expertise-row">
+                    <span class="num-col">01</span>
+                    <div class="body-col">
+                        <h3>PCB Design & Bring-up</h3>
+                        <p>Creating multi-layer schematics, trace routing, power plane decoupling, and manual board soldering.</p>
+                    </div>
+                </div>
+                <div class="expertise-row">
+                    <span class="num-col">02</span>
+                    <div class="body-col">
+                        <h3>Firmware Engineering</h3>
+                        <p>Writing reliable C and C++ scripts for Arduino and custom microcontrollers using UART, I2C, and SPI.</p>
+                    </div>
+                </div>
+                <div class="expertise-row">
+                    <span class="num-col">03</span>
+                    <div class="body-col">
+                        <h3>Electro-Mechanical Design</h3>
+                        <p>Modeling structural enclosures and brackets in Fusion 360/SolidWorks for 3D printing and integration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Work History</h3>
+            <div class="timeline-table">
+                <div class="timeline-row">
+                    <div class="time-col">2026</div>
+                    <div class="title-col">
+                        <h3>Volunteer Helper</h3>
+                        <span>Introduction to Engineering | UNC Charlotte</span>
+                    </div>
+                    <div class="desc-col">
+                        Assisted students in engineering labs with wiring, sensors, microcontrollers, mechanical structures, and debugging.
+                    </div>
+                </div>
+                <div class="timeline-row">
+                    <div class="time-col">2023 – 2024</div>
+                    <div class="title-col">
+                        <h3>Mathematics Tutor</h3>
+                        <span>Algebra & Trigonometry</span>
+                    </div>
+                    <div class="desc-col">
+                        Provided algebra and trigonometry academic support to students through tailored one-on-one sessions.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Involvements Section -->
+        <section id="involvements" class="involvements-section scroll-reveal">
+            <h2 class="section-title">Involvements</h2>
+            <div class="timeline-table">
+                <div class="timeline-row">
+                    <div class="time-col">2025 – Pres</div>
+                    <div class="title-col">
+                        <h3>Robotics Fighting Club</h3>
+                        <span>UNC Charlotte</span>
+                    </div>
+                    <div class="desc-col">
+                        Contributed to robot architecture discussions, chassis modeling, and motor torque integrations.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Projects Section (Accordion Layout) -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="projects-header-minimal">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pcb">PCB</button>
+                    <button class="filter-btn" data-filter="embedded">Embedded</button>
+                    <button class="filter-btn" data-filter="robotics">Robotics</button>
+                </div>
+            </div>
+            
+            <div class="projects-accordion-list">
+                <!-- Project 1 -->
+                <div class="project-accordion-item" data-category="pcb" data-project-id="1">
+                    <div class="project-accordion-header">
+                        <span class="project-num">01</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Academic Project</span>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <h3 class="project-title-text">Electronic Speed Controller (ESC)</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame">
+                                    <img src="assets/project-esc.jpg" alt="Electronic Speed Controller PCB Design">
+                                </div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Designed a custom 24 V DC motor Electronic Speed Controller (ESC) supporting up to 5 A of continuous current. The project prioritized safe power delivery, high-efficiency switching, and precise motor speed control. The board layout was optimized for thermal dissipation and trace widths appropriate for the 5 A current draw.</p>
+                                
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Designed multi-layer PCB layouts in KiCad featuring dedicated ground planes and power pours.</li>
+                                        <li>Implemented via stitching to improve ground plane path efficiency and thermal conductivity.</li>
+                                        <li>Selected components by cross-referencing datasheets for tolerance, footprint size, and availability.</li>
+                                        <li>Styled trace geometry to withstand high-current thresholds safely without overheating.</li>
+                                        <li>Configured PWM signal input routes for motor speed throttling.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>KiCad</span>
+                                    <span>PCB Design</span>
+                                    <span>Motor Control</span>
+                                    <span>BLHeli</span>
+                                    <span>Analog Electronics</span>
+                                </div>
+
+                                <div class="project-actions">
+                                    <a href="https://github.com/TariqKF/electronic-speed-controller" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                                        <span>Source Code / Files</span>
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-accordion-item" data-category="pcb" data-project-id="2">
+                    <div class="project-accordion-header">
+                        <span class="project-num">02</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Embedded MCU Power & Programming Board</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame">
+                                    <img src="assets/project-mcu.jpg" alt="Embedded MCU Power & Programming Board">
+                                </div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Designed a custom microcontroller (MCU) development board that accepts high-voltage power input (24-36 V) and steps it down to a clean, stable 3.3 V using an onboard buck regulator. The board incorporates a modern USB-C connector for programming and board power, along with necessary protective circuitry.</p>
+                                
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Integrated a buck regulator circuit to step down 24-36 V voltage sources to a stable 3.3 V for embedded hardware.</li>
+                                        <li>Configured USB-C connector routes for dual-mode power delivery and serial flashing interface.</li>
+                                        <li>Designed protection support circuitry, including ESD protection and reverse polarity prevention.</li>
+                                        <li>Optimized PCB layout around regulator decoupling capacitors to minimize high-frequency noise.</li>
+                                        <li>Planned clear ground routing to avoid interference with analog signals.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>KiCad</span>
+                                    <span>Embedded C</span>
+                                    <span>Buck Regulators</span>
+                                    <span>USB-C Interface</span>
+                                    <span>Power Setup</span>
+                                </div>
+
+                                <div class="project-actions">
+                                    <a href="https://github.com/TariqKF/mcu-power-programming-board" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                                        <span>Source Code / Files</span>
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-accordion-item" data-category="robotics" data-project-id="3">
+                    <div class="project-accordion-header">
+                        <span class="project-num">03</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Remote Control Robot</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame">
+                                    <img src="assets/project-robot.jpg" alt="Remote-Control Mobile Robot Platform">
+                                </div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Combined RC car mechanics with autonomous robotics concepts to build a mobile platform. The robot features dual DC motor ESC control, obstacle distance sensing, and remote inputs, allowing it to navigate environments and adapt its movement based on sensor feedback.</p>
+                                
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Programmed drive logic, obstacle avoidance routines, and button-triggered behaviors in C++ via Arduino.</li>
+                                        <li>Configured low-resistance common-ground connections across motor drivers, sensors, and controllers to avoid ground loop noise.</li>
+                                        <li>Calibrated throttle responses and obstacle-sensing thresholds to optimize robot stability under payload.</li>
+                                        <li>Wired power distribution and common-ground connections across motors, controllers, sensors, and feedback subsystems.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>C++</span>
+                                    <span>Arduino</span>
+                                    <span>Sensors</span>
+                                    <span>Motor Control</span>
+                                    <span>Power Setup</span>
+                                </div>
+
+                                <div class="project-actions">
+                                    <a href="https://github.com/TariqKF/rc-robot-platform" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                                        <span>Source Code / Files</span>
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-accordion-item" data-category="embedded" data-project-id="4">
+                    <div class="project-accordion-header">
+                        <span class="project-num">04</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Academic Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Automated Bridge Project</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built a motorized bridge prototype that opens and closes automatically in response to sensor input, using Arduino-based control logic and traffic LEDs to simulate safe vehicle and boat crossing behavior.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Programmed Arduino-based control logic to automate bridge opening/closing sequences from sensor input.</li>
+                                        <li>Integrated traffic LED signaling to simulate real-world crossing safety behavior.</li>
+                                        <li>Built mechanical supports and structure for reliable bridge movement.</li>
+                                        <li>Combined mechanical and electrical subsystems to simulate safe boat/vehicle crossing scenarios.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>Arduino</span>
+                                    <span>Sensors</span>
+                                    <span>Mechanical Design</span>
+                                    <span>Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-accordion-item" data-category="embedded" data-project-id="5">
+                    <div class="project-accordion-header">
+                        <span class="project-num">05</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Door Alarm System</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built an ESP32-based door alarm system using a reed switch for door/latch detection, paired with a DFPlayer Mini, microSD card, and speaker to play custom audio alerts when movement is sensed.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Designed sensor-state logic to detect door/latch movement via a reed switch.</li>
+                                        <li>Implemented UART communication between the ESP32 and DFPlayer Mini module.</li>
+                                        <li>Configured microSD-based audio playback for custom alert sounds.</li>
+                                        <li>Triggered real-time MP3 playback in response to detected door movement.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>ESP32</span>
+                                    <span>UART</span>
+                                    <span>Sensors</span>
+                                    <span>Audio Playback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="contact-grid">
+                <div class="contact-text">
+                    <h2 class="section-title">Contact</h2>
+                    <p>Get in touch for collaborative projects, lab builds, or internship opportunities in hardware engineering.</p>
+                    <div class="contact-details-list">
+                        <div>
+                            <span>Email</span>
+                            <a href="mailto:TMKhalaf0@gmail.com">TMKhalaf0@gmail.com</a>
+                        </div>
+                        <div>
+                            <span>Office Location</span>
+                            <p>Charlotte, NC</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-minimal">
+                    <form id="contact-form" novalidate>
+                        <div class="form-group-minimal">
+                            <input type="text" id="form-name" placeholder="Name" required>
+                            <span class="error-msg">Name is required</span>
+                        </div>
+                        <div class="form-group-minimal">
+                            <input type="email" id="form-email" placeholder="Email" required>
+                            <span class="error-msg">Valid email is required</span>
+                        </div>
+                        <div class="form-group-minimal">
+                            <input type="text" id="form-subject" placeholder="Subject" required>
+                            <span class="error-msg">Subject is required</span>
+                        </div>
+                        <div class="form-group-minimal">
+                            <textarea id="form-message" rows="5" placeholder="Message" required></textarea>
+                            <span class="error-msg">Message cannot be empty</span>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-primary">Send Message</button>
+                    </form>
+                    
+                    <div id="form-success" class="form-success-overlay">
+                        <div class="success-content">
+                            <div class="success-icon-circle">
+                                <i data-lucide="check"></i>
+                            </div>
+                            <h3>Sent Successfully</h3>
+                            <p>I will get back to you shortly.</p>
+                            <button id="reset-form-btn" class="btn btn-outline btn-sm">Submit Another</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container section-container">
+            <div class="footer-brand">
+                <span class="logo">Tariq Khalaf</span>
+                <p>Electrical & Computer Engineering Student | UNC Charlotte</p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tariq Khalaf.</p>
+                <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+                    <i data-lucide="arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="app.js"></script>
+</body>
+</html>
