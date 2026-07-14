@@ -106,6 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         isMatch = (category === "pcb" && item.getAttribute("data-project-id") === "2") || category === "embedded";
                     } else if (filterValue === "robotics" && category === "robotics") {
                         isMatch = true;
+                    } else if (filterValue === "software" && category === "software") {
+                        isMatch = true;
                     }
 
                     if (isMatch) {

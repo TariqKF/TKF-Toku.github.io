@@ -104,7 +104,7 @@
                     <div class="stat-label">Graduation Expected</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">05+</div>
+                    <div class="stat-number">06+</div>
                     <div class="stat-label">Engineering Projects</div>
                 </div>
                 <div class="stat-item">
@@ -237,9 +237,10 @@
                     <button class="filter-btn" data-filter="pcb">PCB</button>
                     <button class="filter-btn" data-filter="embedded">Embedded</button>
                     <button class="filter-btn" data-filter="robotics">Robotics</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
                 </div>
             </div>
-            
+
             <div class="projects-accordion-list">
                 <!-- Project 1 -->
                 <div class="project-accordion-item" data-category="pcb" data-project-id="1">
@@ -259,9 +260,7 @@
                     <div class="project-accordion-content">
                         <div class="project-accordion-inner">
                             <div class="project-accordion-img">
-                                <div class="image-frame">
-                                    <img src="assets/project-esc.jpg" alt="Electronic Speed Controller PCB Design">
-                                </div>
+                                <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
                                 <p>Designed a custom 24 V DC motor Electronic Speed Controller (ESC) supporting up to 5 A of continuous current. The project prioritized safe power delivery, high-efficiency switching, and precise motor speed control. The board layout was optimized for thermal dissipation and trace widths appropriate for the 5 A current draw.</p>
@@ -314,9 +313,7 @@
                     <div class="project-accordion-content">
                         <div class="project-accordion-inner">
                             <div class="project-accordion-img">
-                                <div class="image-frame">
-                                    <img src="assets/project-mcu.jpg" alt="Embedded MCU Power & Programming Board">
-                                </div>
+                                <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
                                 <p>Designed a custom microcontroller (MCU) development board that accepts high-voltage power input (24-36 V) and steps it down to a clean, stable 3.3 V using an onboard buck regulator. The board incorporates a modern USB-C connector for programming and board power, along with necessary protective circuitry.</p>
@@ -352,9 +349,61 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-accordion-item" data-category="robotics" data-project-id="3">
+                <div class="project-accordion-item" data-category="software" data-project-id="3">
                     <div class="project-accordion-header">
                         <span class="project-num">03</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">BallerIo &mdash; Real-Time Multiplayer Web Game</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built a real-time multiplayer browser game with Node.js and WebSockets, syncing player state across concurrent clients at roughly 30 updates per second. Players compete using merge-attraction mechanics, split/eject actions, and an XP/leveling system.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Built a WebSocket-based real-time server in Node.js to broadcast synchronized game state to all connected clients.</li>
+                                        <li>Implemented merge-attraction mechanics, split/eject actions, and an XP/leveling progression system.</li>
+                                        <li>Tuned server tick rate to sustain ~30 updates/second under concurrent multiplayer load.</li>
+                                        <li>Deployed to production on Render with version control and continuous deployment through GitHub.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>Node.js</span>
+                                    <span>WebSockets</span>
+                                    <span>JavaScript</span>
+                                    <span>Real-Time Multiplayer</span>
+                                    <span>Render / CI-CD</span>
+                                </div>
+
+                                <div class="project-actions">
+                                    <a href="https://github.com/TariqKF/BallerIo" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                                        <span>Source Code / Files</span>
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-accordion-item" data-category="robotics" data-project-id="4">
+                    <div class="project-accordion-header">
+                        <span class="project-num">04</span>
                         <div class="project-header-info">
                             <div class="project-meta-row">
                                 <span class="project-cat">Personal Project</span>
@@ -369,9 +418,7 @@
                     <div class="project-accordion-content">
                         <div class="project-accordion-inner">
                             <div class="project-accordion-img">
-                                <div class="image-frame">
-                                    <img src="assets/project-robot.jpg" alt="Remote-Control Mobile Robot Platform">
-                                </div>
+                                <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
                                 <p>Combined RC car mechanics with autonomous robotics concepts to build a mobile platform. The robot features dual DC motor ESC control, obstacle distance sensing, and remote inputs, allowing it to navigate environments and adapt its movement based on sensor feedback.</p>
@@ -405,10 +452,10 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-accordion-item" data-category="embedded" data-project-id="4">
+                <!-- Project 5 -->
+                <div class="project-accordion-item" data-category="embedded" data-project-id="5">
                     <div class="project-accordion-header">
-                        <span class="project-num">04</span>
+                        <span class="project-num">05</span>
                         <div class="project-header-info">
                             <div class="project-meta-row">
                                 <span class="project-cat">Academic Project</span>
@@ -449,10 +496,10 @@
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="project-accordion-item" data-category="embedded" data-project-id="5">
+                <!-- Project 6 -->
+                <div class="project-accordion-item" data-category="embedded" data-project-id="6">
                     <div class="project-accordion-header">
-                        <span class="project-num">05</span>
+                        <span class="project-num">06</span>
                         <div class="project-header-info">
                             <div class="project-meta-row">
                                 <span class="project-cat">Personal Project</span>
