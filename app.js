@@ -36,9 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const toggleMobileMenu = () => {
         navMenu.classList.toggle("active");
-        const isOpen = navMenu.classList.contains("active");
-        mobileMenuToggle.innerHTML = isOpen ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
-        lucide.createIcons();
+        mobileMenuToggle.classList.toggle("active");
     };
 
     mobileMenuToggle.addEventListener("click", toggleMobileMenu);
