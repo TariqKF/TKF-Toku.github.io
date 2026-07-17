@@ -1068,6 +1068,9 @@ button {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+    .hero-visual .image-frame {
+        max-width: 110px;
+    }
     .projects-header-minimal {
         flex-direction: column;
         gap: 1.5rem;
