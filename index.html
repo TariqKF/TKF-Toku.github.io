@@ -105,7 +105,7 @@
                     <div class="stat-label">Graduation Expected</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">06+</div>
+                    <div class="stat-number">09+</div>
                     <div class="stat-label">Engineering Projects</div>
                 </div>
                 <div class="stat-item">
@@ -422,21 +422,23 @@
                                 <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
-                                <p>Combined RC car mechanics with autonomous robotics concepts to build a mobile platform. The robot features dual DC motor ESC control, obstacle distance sensing, and remote inputs, allowing it to navigate environments and adapt its movement based on sensor feedback.</p>
-                                
+                                <p>Combined RC car mechanics with autonomous robotics concepts to build a mobile platform. An ESP32 drives two brushed DC motors through a TB6612FNG dual H-bridge driver, with ultrasonic distance sensing, motion detection, buzzers, and an onboard camera letting the robot navigate environments and adapt its movement based on sensor feedback.</p>
+
                                 <div class="accordion-sub-section">
                                     <h4>Engineering Highlights</h4>
                                     <ul>
-                                        <li>Programmed drive logic, obstacle avoidance routines, and button-triggered behaviors in C++ via Arduino.</li>
-                                        <li>Configured low-resistance common-ground connections across motor drivers, sensors, and controllers to avoid ground loop noise.</li>
-                                        <li>Calibrated throttle responses and obstacle-sensing thresholds to optimize robot stability under payload.</li>
-                                        <li>Wired power distribution and common-ground connections across motors, controllers, sensors, and feedback subsystems.</li>
+                                        <li>Programmed drive logic, obstacle avoidance routines, and button-triggered behaviors in C++ on the ESP32.</li>
+                                        <li>Drove two brushed DC motors through a TB6612FNG dual H-bridge, tuning PWM output for smooth throttle response.</li>
+                                        <li>Integrated an ultrasonic distance sensor, motion detector, buzzers, and an onboard camera for obstacle detection, alerts, and remote viewing.</li>
+                                        <li>Configured low-resistance common-ground connections across motor driver, sensors, and controller to avoid ground loop noise.</li>
+                                        <li>Wired power distribution across motors, driver, MCU, sensors, and feedback subsystems for stability under payload.</li>
                                     </ul>
                                 </div>
 
                                 <div class="accordion-tags">
+                                    <span>ESP32</span>
                                     <span>C++</span>
-                                    <span>Arduino</span>
+                                    <span>TB6612FNG</span>
                                     <span>Sensors</span>
                                     <span>Motor Control</span>
                                     <span>Power Setup</span>
@@ -474,23 +476,26 @@
                                 <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
-                                <p>Built a motorized bridge prototype that opens and closes automatically in response to sensor input, using Arduino-based control logic and traffic LEDs to simulate safe vehicle and boat crossing behavior.</p>
+                                <p>Built a motorized bridge that opens and closes automatically in response to sensor input, running off a custom MCU board. One brushed DC motor and a servo are driven through a TB6612FNG dual H-bridge, with traffic LEDs and buzzers signaling crossing state to vehicles and boats.</p>
 
                                 <div class="accordion-sub-section">
                                     <h4>Engineering Highlights</h4>
                                     <ul>
-                                        <li>Programmed Arduino-based control logic to automate bridge opening/closing sequences from sensor input.</li>
-                                        <li>Integrated traffic LED signaling to simulate real-world crossing safety behavior.</li>
-                                        <li>Built mechanical supports and structure for reliable bridge movement.</li>
-                                        <li>Combined mechanical and electrical subsystems to simulate safe boat/vehicle crossing scenarios.</li>
+                                        <li>Programmed control logic on a custom MCU board to automate bridge opening/closing sequences from ultrasonic sensor input.</li>
+                                        <li>Drove one brushed DC motor and a servo through a TB6612FNG dual H-bridge for lift and locking motion.</li>
+                                        <li>Integrated traffic LED and buzzer signaling to simulate real-world crossing safety behavior.</li>
+                                        <li>Fabricated the structure from a self-designed 3D-printed bridge deck on hand-cast cement pillars.</li>
+                                        <li>Combined mechanics, power distribution, and control into one working prototype for safe boat/vehicle crossing scenarios.</li>
                                     </ul>
                                 </div>
 
                                 <div class="accordion-tags">
-                                    <span>Arduino</span>
+                                    <span>Custom MCU</span>
+                                    <span>TB6612FNG</span>
+                                    <span>Servo Control</span>
                                     <span>Sensors</span>
+                                    <span>3D Printing</span>
                                     <span>Mechanical Design</span>
-                                    <span>Automation</span>
                                 </div>
                             </div>
                         </div>
@@ -581,6 +586,98 @@
                                     <span>Computer Vision</span>
                                     <span>OpenCV</span>
                                     <span>Real-Time Detection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-accordion-item" data-category="software" data-project-id="8">
+                    <div class="project-accordion-header">
+                        <span class="project-num">08</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Personal A.I. Assistant &mdash; Local Voice Command Centre</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built a hands-free voice assistant in Python that runs entirely on local hardware, with no cloud speech services in the loop. A local speech-to-text engine feeds a reasoning layer, and GPU-accelerated neural text-to-speech returns a spoken reply in roughly one to two seconds. An intent router turns everyday spoken requests into real actions across the calendar, browser, and file system.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Built a full local voice pipeline pairing a speech-to-text engine with GPU neural text-to-speech, keeping audio off third-party servers.</li>
+                                        <li>Implemented wake-word activation and push-to-talk alongside barge-in interruption, so speaking over a reply cancels playback and starts a new turn immediately.</li>
+                                        <li>Wrote an intent router that classifies spoken commands and dispatches them to calendar, browser control, and file management handlers.</li>
+                                        <li>Added a real-time browser visualizer over WebSockets, streaming live audio levels and assistant state to an animated interface.</li>
+                                        <li>Tuned speech recognition parameters against real microphone input rather than clean samples, after clean-audio-only testing proved misleading.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>Python</span>
+                                    <span>Speech Recognition</span>
+                                    <span>Neural TTS</span>
+                                    <span>WebSockets</span>
+                                    <span>Local-First AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-accordion-item" data-category="software" data-project-id="9">
+                    <div class="project-accordion-header">
+                        <span class="project-num">09</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Calorie &amp; Macro Tracker &mdash; Nutrition Web App</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built a web app for tracking daily calories and macronutrients, with a searchable food database and barcode scanning so meals can be logged in seconds rather than typed out by hand. The app extends past food logging into grocery tracking, letting items be entered manually or pulled from Costco, Target, and Harris Teeter product data.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Implemented daily calorie and macronutrient logging with running totals for protein, carbohydrates, and fats against user-set targets.</li>
+                                        <li>Integrated a searchable food database with barcode scanning to resolve products to their nutrition data on the spot.</li>
+                                        <li>Built grocery tracking that accepts manual entry or lookups against Costco, Target, and Harris Teeter product listings.</li>
+                                        <li>Normalized nutrition data from multiple sources into a single internal format so servings and units stay consistent across retailers.</li>
+                                        <li>Designed the interface around fast repeat entry, keeping the common case of logging a known food to a couple of interactions.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>JavaScript</span>
+                                    <span>Web App</span>
+                                    <span>Nutrition Database</span>
+                                    <span>Barcode Scanning</span>
+                                    <span>UI/UX Design</span>
                                 </div>
                             </div>
                         </div>
