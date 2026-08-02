@@ -237,6 +237,7 @@
                     <button class="filter-btn" data-filter="pcb">PCB</button>
                     <button class="filter-btn" data-filter="embedded">Embedded</button>
                     <button class="filter-btn" data-filter="robotics">Robotics</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
                 </div>
             </div>
             
@@ -487,6 +488,58 @@
                                     <span>UART</span>
                                     <span>Sensors</span>
                                     <span>Audio Playback</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-accordion-item" data-category="software" data-project-id="6">
+                    <div class="project-accordion-header">
+                        <span class="project-num">06</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Engineering Trivia — AI Quiz App</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built a full-stack web app that generates engineering trivia and interview questions live using the Gemini API, rather than pulling from a static question bank. Supports a solo quiz mode, an AI-graded technical interview prep mode, and real-time multiplayer rooms where friends compete on the same AI-generated questions.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Used structured JSON output from the Gemini API to reliably generate quiz questions, interview prompts, and answer evaluations.</li>
+                                        <li>Built real-time multiplayer rooms with Socket.IO, including live timers, scoring, and leaderboards synced across clients.</li>
+                                        <li>Designed an interview-prep mode where open-ended answers are graded by the AI with a verdict, targeted feedback, and a natural follow-up question.</li>
+                                        <li>Implemented an Express backend serving both REST endpoints (solo/interview) and WebSocket events (multiplayer).</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>Node.js</span>
+                                    <span>Express</span>
+                                    <span>Socket.IO</span>
+                                    <span>Gemini API</span>
+                                    <span>JavaScript</span>
+                                </div>
+
+                                <div class="project-actions">
+                                    <a href="https://github.com/TariqKF/engineering-trivia" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                                        <span>Source Code / Files</span>
+                                        <i data-lucide="github"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
