@@ -243,6 +243,10 @@ button {
     color: var(--text-secondary);
 }
 
+.mobile-menu-btn .close-icon { display: none; }
+.mobile-menu-btn.active .menu-icon { display: none; }
+.mobile-menu-btn.active .close-icon { display: block; }
+
 /* ==========================================================================
    HERO LAYOUT
    ========================================================================== */
@@ -318,6 +322,9 @@ button {
     height: 100%;
     object-fit: cover;
     border-radius: calc(var(--radius-sm) - 4px);
+    /* Opt out of the site-wide greyscale-until-hover treatment: the portrait
+       stays in colour at all times. */
+    filter: none !important;
 }
 
 /* ==========================================================================
@@ -998,12 +1005,12 @@ button {
    ========================================================================== */
 @media (max-width: 960px) {
     .hero-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 120px;
         gap: 1.5rem;
     }
     .hero-visual {
-        justify-content: flex-start;
-        order: -1;
+        justify-content: flex-end;
+        order: 0;
         margin-top: 0;
     }
     .about-grid {
@@ -1061,12 +1068,26 @@ button {
     .section-container {
         padding: 0 1.25rem;
     }
+    .nav-container {
+        padding: 1.5rem 1.25rem;
+    }
     .hero-title {
         font-size: 2.75rem;
     }
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    .hero-grid {
+        grid-template-columns: 1fr 51px;
+        gap: 0.75rem;
+    }
+    .hero-visual {
+        margin-top: -0.75rem;
+    }
+    .hero-visual .image-frame {
+        max-width: 51px;
+        padding: 2px;
     }
     .projects-header-minimal {
         flex-direction: column;
