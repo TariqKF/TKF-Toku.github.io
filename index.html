@@ -10,17 +10,24 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d0d0d'/%3E%3Ctext x='50' y='58' font-family='Arial, sans-serif' font-size='42' font-weight='700' fill='%23f2f2f2' text-anchor='middle'%3ETK%3C/text%3E%3C/svg%3E">
 
     <!-- Open Graph / Social Sharing -->
-    <!-- og:image/twitter:image use a relative path; once this is deployed, swap in the full https:// URL so link previews on LinkedIn/Slack/iMessage can resolve it. -->
+    <!-- og:image must be an absolute https:// URL - scrapers (LinkedIn/Slack/iMessage) do not resolve relative paths. -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tariqkf.github.io/TKF-Toku.github.io/">
+    <meta property="og:site_name" content="Tariq Khalaf">
     <meta property="og:title" content="Tariq Khalaf | E&CE Portfolio">
     <meta property="og:description" content="Electrical & Computer Engineering Student at UNC Charlotte. Minimalist portfolio specializing in PCB Design, Embedded Systems, and Robotics.">
-    <meta property="og:image" content="assets/hero.jpg">
+    <meta property="og:image" content="https://tariqkf.github.io/TKF-Toku.github.io/assets/og-preview-v2.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tariq Khalaf - Designing hardware, firmware, and electro-mechanical systems.">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tariq Khalaf | E&CE Portfolio">
     <meta name="twitter:description" content="Electrical & Computer Engineering Student at UNC Charlotte. Minimalist portfolio specializing in PCB Design, Embedded Systems, and Robotics.">
-    <meta name="twitter:image" content="assets/hero.jpg">
+    <meta name="twitter:image" content="https://tariqkf.github.io/TKF-Toku.github.io/assets/og-preview-v2.png">
+    <meta name="twitter:image:alt" content="Tariq Khalaf - Designing hardware, firmware, and electro-mechanical systems.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +54,7 @@
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#involvements" class="nav-link">Involvements</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="/resume.pdf" target="_blank" rel="noopener" class="nav-link">Resume</a></li>
+                    <li><a href="Tariq_Khalaf_Resume.pdf" target="_blank" rel="noopener" class="nav-link">Resume</a></li>
                     <li><a href="#contact" class="nav-link btn-contact">Contact</a></li>
                 </ul>
             </nav>
@@ -58,7 +65,8 @@
                     <i data-lucide="moon" class="moon-icon"></i>
                 </button>
                 <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Open menu">
-                    <i data-lucide="menu"></i>
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon"></i>
                 </button>
             </div>
         </div>
@@ -87,7 +95,7 @@
                 
                 <div class="hero-visual">
                     <div class="image-frame">
-                        <img src="assets/hero.jpg" alt="Technical hardware design" class="hero-img">
+                        <img src="assets/profile.jpg" alt="Portrait of Tariq Khalaf" class="hero-img">
                     </div>
                 </div>
             </div>
@@ -104,7 +112,7 @@
                     <div class="stat-label">Graduation Expected</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">05+</div>
+                    <div class="stat-number">09+</div>
                     <div class="stat-label">Engineering Projects</div>
                 </div>
                 <div class="stat-item">
@@ -125,8 +133,8 @@
                     <p>I focus on hardware safety, thermal planning, and clean low-level firmware structures. I also participate in the UNC Charlotte Robotics Fighting Club, contributing to structural design and motor control workflows.</p>
                     
                     <div class="social-links-minimal">
-                        <a href="https://github.com/TariqKF" target="_blank" rel="noopener" class="social-link"><i data-lucide="github"></i> github.com/TariqKF</a>
-                        <a href="https://linkedin.com/in/TareqKF" target="_blank" rel="noopener" class="social-link"><i data-lucide="linkedin"></i> linkedin.com/in/TareqKF</a>
+                        <a href="https://github.com/TariqKF" target="_blank" rel="noopener" class="social-link"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub</a>
+                        <a href="https://linkedin.com/in/TareqKF" target="_blank" rel="noopener" class="social-link"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
                         <a href="mailto:TMKhalaf0@gmail.com" class="social-link"><i data-lucide="mail"></i> TMKhalaf0@gmail.com</a>
                     </div>
                 </div>
@@ -214,13 +222,33 @@
             <h2 class="section-title">Involvements</h2>
             <div class="timeline-table">
                 <div class="timeline-row">
-                    <div class="time-col">2025 – Pres</div>
+                    <div class="time-col">2025 &ndash; 2026</div>
                     <div class="title-col">
                         <h3>Robotics Fighting Club</h3>
                         <span>UNC Charlotte</span>
                     </div>
                     <div class="desc-col">
                         Contributed to robot architecture discussions, chassis modeling, and motor torque integrations.
+                    </div>
+                </div>
+                <div class="timeline-row">
+                    <div class="time-col">2025</div>
+                    <div class="title-col">
+                        <h3>Hack_NCState</h3>
+                        <span>NC State University</span>
+                    </div>
+                    <div class="desc-col">
+                        Took part in NC State's student hackathon, building and presenting a project under a fixed time limit.
+                    </div>
+                </div>
+                <div class="timeline-row">
+                    <div class="time-col">2024 &ndash; 2025</div>
+                    <div class="title-col">
+                        <h3>Engineering Hardware Meet-ups</h3>
+                        <span>Bitar Machine Design</span>
+                    </div>
+                    <div class="desc-col">
+                        Attended hardware meet-ups hosted by Bitar Machine Design, a sponsor of UNC Charlotte engineering clubs, where companies presented active projects &mdash; networking with industry engineers and like-minded students.
                     </div>
                 </div>
             </div>
@@ -240,7 +268,7 @@
                     <button class="filter-btn" data-filter="software">Software</button>
                 </div>
             </div>
-            
+
             <div class="projects-accordion-list">
                 <!-- Project 1 -->
                 <div class="project-accordion-item" data-category="pcb" data-project-id="1">
@@ -260,9 +288,7 @@
                     <div class="project-accordion-content">
                         <div class="project-accordion-inner">
                             <div class="project-accordion-img">
-                                <div class="image-frame">
-                                    <img src="assets/project-esc.jpg" alt="Electronic Speed Controller PCB Design">
-                                </div>
+                                <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
                                 <p>Designed a custom 24 V DC motor Electronic Speed Controller (ESC) supporting up to 5 A of continuous current. The project prioritized safe power delivery, high-efficiency switching, and precise motor speed control. The board layout was optimized for thermal dissipation and trace widths appropriate for the 5 A current draw.</p>
@@ -289,7 +315,7 @@
                                 <div class="project-actions">
                                     <a href="https://github.com/TariqKF/electronic-speed-controller" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
                                         <span>Source Code / Files</span>
-                                        <i data-lucide="github"></i>
+                                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                                     </a>
                                 </div>
                             </div>
@@ -315,9 +341,7 @@
                     <div class="project-accordion-content">
                         <div class="project-accordion-inner">
                             <div class="project-accordion-img">
-                                <div class="image-frame">
-                                    <img src="assets/project-mcu.jpg" alt="Embedded MCU Power & Programming Board">
-                                </div>
+                                <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
                                 <p>Designed a custom microcontroller (MCU) development board that accepts high-voltage power input (24-36 V) and steps it down to a clean, stable 3.3 V using an onboard buck regulator. The board incorporates a modern USB-C connector for programming and board power, along with necessary protective circuitry.</p>
@@ -344,7 +368,7 @@
                                 <div class="project-actions">
                                     <a href="https://github.com/TariqKF/mcu-power-programming-board" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
                                         <span>Source Code / Files</span>
-                                        <i data-lucide="github"></i>
+                                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                                     </a>
                                 </div>
                             </div>
@@ -353,9 +377,61 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-accordion-item" data-category="robotics" data-project-id="3">
+                <div class="project-accordion-item" data-category="software" data-project-id="3">
                     <div class="project-accordion-header">
                         <span class="project-num">03</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">BallerIo &mdash; Real-Time Multiplayer Web Game</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built a real-time multiplayer browser game with Node.js and WebSockets, syncing player state across concurrent clients at roughly 30 updates per second. Players compete using merge-attraction mechanics, split/eject actions, and an XP/leveling system.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Built a WebSocket-based real-time server in Node.js to broadcast synchronized game state to all connected clients.</li>
+                                        <li>Implemented merge-attraction mechanics, split/eject actions, and an XP/leveling progression system.</li>
+                                        <li>Tuned server tick rate to sustain ~30 updates/second under concurrent multiplayer load.</li>
+                                        <li>Deployed to production on Render with version control and continuous deployment through GitHub.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>Node.js</span>
+                                    <span>WebSockets</span>
+                                    <span>JavaScript</span>
+                                    <span>Real-Time Multiplayer</span>
+                                    <span>Render / CI-CD</span>
+                                </div>
+
+                                <div class="project-actions">
+                                    <a href="https://github.com/TariqKF/BallerIo" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                                        <span>Source Code / Files</span>
+                                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-accordion-item" data-category="robotics" data-project-id="4">
+                    <div class="project-accordion-header">
+                        <span class="project-num">04</span>
                         <div class="project-header-info">
                             <div class="project-meta-row">
                                 <span class="project-cat">Personal Project</span>
@@ -370,26 +446,26 @@
                     <div class="project-accordion-content">
                         <div class="project-accordion-inner">
                             <div class="project-accordion-img">
-                                <div class="image-frame">
-                                    <img src="assets/project-robot.jpg" alt="Remote-Control Mobile Robot Platform">
-                                </div>
+                                <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
-                                <p>Combined RC car mechanics with autonomous robotics concepts to build a mobile platform. The robot features dual DC motor ESC control, obstacle distance sensing, and remote inputs, allowing it to navigate environments and adapt its movement based on sensor feedback.</p>
-                                
+                                <p>Combined RC car mechanics with autonomous robotics concepts to build a mobile platform. An ESP32 drives two brushed DC motors through a TB6612FNG dual H-bridge driver, with ultrasonic distance sensing, motion detection, buzzers, and an onboard camera letting the robot navigate environments and adapt its movement based on sensor feedback.</p>
+
                                 <div class="accordion-sub-section">
                                     <h4>Engineering Highlights</h4>
                                     <ul>
-                                        <li>Programmed drive logic, obstacle avoidance routines, and button-triggered behaviors in C++ via Arduino.</li>
-                                        <li>Configured low-resistance common-ground connections across motor drivers, sensors, and controllers to avoid ground loop noise.</li>
-                                        <li>Calibrated throttle responses and obstacle-sensing thresholds to optimize robot stability under payload.</li>
-                                        <li>Wired power distribution and common-ground connections across motors, controllers, sensors, and feedback subsystems.</li>
+                                        <li>Programmed drive logic, obstacle avoidance routines, and button-triggered behaviors in C++ on the ESP32.</li>
+                                        <li>Drove two brushed DC motors through a TB6612FNG dual H-bridge, tuning PWM output for smooth throttle response.</li>
+                                        <li>Integrated an ultrasonic distance sensor, motion detector, buzzers, and an onboard camera for obstacle detection, alerts, and remote viewing.</li>
+                                        <li>Configured low-resistance common-ground connections across motor driver, sensors, and controller to avoid ground loop noise.</li>
+                                        <li>Wired power distribution across motors, driver, MCU, sensors, and feedback subsystems for stability under payload.</li>
                                     </ul>
                                 </div>
 
                                 <div class="accordion-tags">
+                                    <span>ESP32</span>
                                     <span>C++</span>
-                                    <span>Arduino</span>
+                                    <span>TB6612FNG</span>
                                     <span>Sensors</span>
                                     <span>Motor Control</span>
                                     <span>Power Setup</span>
@@ -398,7 +474,7 @@
                                 <div class="project-actions">
                                     <a href="https://github.com/TariqKF/rc-robot-platform" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
                                         <span>Source Code / Files</span>
-                                        <i data-lucide="github"></i>
+                                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                                     </a>
                                 </div>
                             </div>
@@ -406,10 +482,10 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-accordion-item" data-category="embedded" data-project-id="4">
+                <!-- Project 5 -->
+                <div class="project-accordion-item" data-category="embedded" data-project-id="5">
                     <div class="project-accordion-header">
-                        <span class="project-num">04</span>
+                        <span class="project-num">05</span>
                         <div class="project-header-info">
                             <div class="project-meta-row">
                                 <span class="project-cat">Academic Project</span>
@@ -427,33 +503,36 @@
                                 <div class="image-frame"></div>
                             </div>
                             <div class="project-accordion-desc">
-                                <p>Built a motorized bridge prototype that opens and closes automatically in response to sensor input, using Arduino-based control logic and traffic LEDs to simulate safe vehicle and boat crossing behavior.</p>
+                                <p>Built a motorized bridge that opens and closes automatically in response to sensor input, running off a custom MCU board. One brushed DC motor and a servo are driven through a TB6612FNG dual H-bridge, with traffic LEDs and buzzers signaling crossing state to vehicles and boats.</p>
 
                                 <div class="accordion-sub-section">
                                     <h4>Engineering Highlights</h4>
                                     <ul>
-                                        <li>Programmed Arduino-based control logic to automate bridge opening/closing sequences from sensor input.</li>
-                                        <li>Integrated traffic LED signaling to simulate real-world crossing safety behavior.</li>
-                                        <li>Built mechanical supports and structure for reliable bridge movement.</li>
-                                        <li>Combined mechanical and electrical subsystems to simulate safe boat/vehicle crossing scenarios.</li>
+                                        <li>Programmed control logic on a custom MCU board to automate bridge opening/closing sequences from ultrasonic sensor input.</li>
+                                        <li>Drove one brushed DC motor and a servo through a TB6612FNG dual H-bridge for lift and locking motion.</li>
+                                        <li>Integrated traffic LED and buzzer signaling to simulate real-world crossing safety behavior.</li>
+                                        <li>Fabricated the structure from a self-designed 3D-printed bridge deck on hand-cast cement pillars.</li>
+                                        <li>Combined mechanics, power distribution, and control into one working prototype for safe boat/vehicle crossing scenarios.</li>
                                     </ul>
                                 </div>
 
                                 <div class="accordion-tags">
-                                    <span>Arduino</span>
+                                    <span>Custom MCU</span>
+                                    <span>TB6612FNG</span>
+                                    <span>Servo Control</span>
                                     <span>Sensors</span>
+                                    <span>3D Printing</span>
                                     <span>Mechanical Design</span>
-                                    <span>Automation</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="project-accordion-item" data-category="embedded" data-project-id="5">
+                <!-- Project 6 -->
+                <div class="project-accordion-item" data-category="embedded" data-project-id="6">
                     <div class="project-accordion-header">
-                        <span class="project-num">05</span>
+                        <span class="project-num">06</span>
                         <div class="project-header-info">
                             <div class="project-meta-row">
                                 <span class="project-cat">Personal Project</span>
@@ -494,16 +573,154 @@
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="project-accordion-item" data-category="software" data-project-id="6">
+                <!-- Project 7 -->
+                <div class="project-accordion-item" data-category="software" data-project-id="7">
                     <div class="project-accordion-header">
-                        <span class="project-num">06</span>
+                        <span class="project-num">07</span>
                         <div class="project-header-info">
                             <div class="project-meta-row">
                                 <span class="project-cat">Personal Project</span>
                                 <span class="project-year">2026</span>
                             </div>
-                            <h3 class="project-title-text">Engineering Trivia — AI Quiz App</h3>
+                            <h3 class="project-title-text">Person &amp; Object Identifier &mdash; Real-Time Computer Vision System</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Designed and implemented a real-time person and object identification system built around a YOLO-based object detection pipeline. Prior to development, I produced a dedicated system architecture and data-flow diagram, using the project as a deliberate exercise in mapping out topology and structuring a multi-stage computer vision pipeline before writing a single line of code.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Implemented a YOLO-based detection pipeline to identify and classify people and objects from live video input in real time.</li>
+                                        <li>Authored a full system architecture and data-flow diagram ahead of implementation, defining clear boundaries between capture, preprocessing, inference, and output stages.</li>
+                                        <li>Tuned model confidence thresholds and non-max suppression parameters to balance detection accuracy against false-positive rate.</li>
+                                        <li>Structured the pipeline into modular, independently testable stages to keep the system extensible for future model or sensor upgrades.</li>
+                                        <li>Benchmarked frame-processing throughput and inference latency to identify and resolve performance bottlenecks in the detection loop.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>Python</span>
+                                    <span>YOLO</span>
+                                    <span>Computer Vision</span>
+                                    <span>OpenCV</span>
+                                    <span>Real-Time Detection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-accordion-item" data-category="software" data-project-id="8">
+                    <div class="project-accordion-header">
+                        <span class="project-num">08</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Personal A.I. Assistant &mdash; Local Voice Command Centre</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built a hands-free voice assistant in Python that runs entirely on local hardware, with no cloud speech services in the loop. A local speech-to-text engine feeds a reasoning layer, and GPU-accelerated neural text-to-speech returns a spoken reply in roughly one to two seconds. An intent router turns everyday spoken requests into real actions across the calendar, browser, and file system.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Built a full local voice pipeline pairing a speech-to-text engine with GPU neural text-to-speech, keeping audio off third-party servers.</li>
+                                        <li>Implemented wake-word activation and push-to-talk alongside barge-in interruption, so speaking over a reply cancels playback and starts a new turn immediately.</li>
+                                        <li>Wrote an intent router that classifies spoken commands and dispatches them to calendar, browser control, and file management handlers.</li>
+                                        <li>Added a real-time browser visualizer over WebSockets, streaming live audio levels and assistant state to an animated interface.</li>
+                                        <li>Tuned speech recognition parameters against real microphone input rather than clean samples, after clean-audio-only testing proved misleading.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>Python</span>
+                                    <span>Speech Recognition</span>
+                                    <span>Neural TTS</span>
+                                    <span>WebSockets</span>
+                                    <span>Local-First AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-accordion-item" data-category="software" data-project-id="9">
+                    <div class="project-accordion-header">
+                        <span class="project-num">09</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Calorie &amp; Macro Tracker &mdash; Nutrition Web App</h3>
+                        </div>
+                        <div class="project-icon-toggle">
+                            <i data-lucide="plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-accordion-content">
+                        <div class="project-accordion-inner">
+                            <div class="project-accordion-img">
+                                <div class="image-frame"></div>
+                            </div>
+                            <div class="project-accordion-desc">
+                                <p>Built a web app for tracking daily calories and macronutrients, with a searchable food database and barcode scanning so meals can be logged in seconds rather than typed out by hand. The app extends past food logging into grocery tracking, letting items be entered manually or pulled from Costco, Target, and Harris Teeter product data.</p>
+
+                                <div class="accordion-sub-section">
+                                    <h4>Engineering Highlights</h4>
+                                    <ul>
+                                        <li>Implemented daily calorie and macronutrient logging with running totals for protein, carbohydrates, and fats against user-set targets.</li>
+                                        <li>Integrated a searchable food database with barcode scanning to resolve products to their nutrition data on the spot.</li>
+                                        <li>Built grocery tracking that accepts manual entry or lookups against Costco, Target, and Harris Teeter product listings.</li>
+                                        <li>Normalized nutrition data from multiple sources into a single internal format so servings and units stay consistent across retailers.</li>
+                                        <li>Designed the interface around fast repeat entry, keeping the common case of logging a known food to a couple of interactions.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-tags">
+                                    <span>JavaScript</span>
+                                    <span>Web App</span>
+                                    <span>Nutrition Database</span>
+                                    <span>Barcode Scanning</span>
+                                    <span>UI/UX Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-accordion-item" data-category="software" data-project-id="10">
+                    <div class="project-accordion-header">
+                        <span class="project-num">10</span>
+                        <div class="project-header-info">
+                            <div class="project-meta-row">
+                                <span class="project-cat">Personal Project</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title-text">Engineering Trivia &mdash; AI Quiz App</h3>
                         </div>
                         <div class="project-icon-toggle">
                             <i data-lucide="plus"></i>
