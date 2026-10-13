@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     } else if (filterValue === "pcb" && category === "pcb") {
                         isMatch = true;
                     } else if (filterValue === "embedded" && (category === "embedded" || category === "pcb")) {
-                        isMatch = (category === "pcb" && item.getAttribute("data-project-id") === "2") || category === "embedded";
+                        isMatch = (category === "pcb" && item.getAttribute("data-project-id") === "3") || category === "embedded";
                     } else if (filterValue === "robotics" && category === "robotics") {
                         isMatch = true;
                     } else if (filterValue === "software" && category === "software") {
