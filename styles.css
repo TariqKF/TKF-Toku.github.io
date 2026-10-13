@@ -720,33 +720,7 @@ button {
 
 .project-accordion-inner {
     padding: 0 0 3rem 80px;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 4rem;
-}
-
-.project-accordion-img {
-    width: 100%;
-}
-
-.project-accordion-img .image-frame {
-    width: 100%;
-    aspect-ratio: 16/10;
-    border: 1px solid var(--border-color);
-    padding: 6px;
-    border-radius: var(--radius-sm);
-    background-color: var(--bg-surface);
-}
-
-.project-accordion-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: calc(var(--radius-sm) - 2px);
-}
-
-.project-accordion-item:hover img {
-    filter: grayscale(0%);
+    max-width: 820px;
 }
 
 .project-accordion-desc p {
@@ -1028,8 +1002,6 @@ button {
         padding: 1.5rem 0;
     }
     .project-accordion-inner {
-        grid-template-columns: 1fr;
-        gap: 2rem;
         padding-left: 0;
     }
     .project-num {
