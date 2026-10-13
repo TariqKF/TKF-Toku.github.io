@@ -71,6 +71,28 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", checkHeaderScroll);
     checkHeaderScroll(); // Run on init
 
+    // Keep --header-height in sync so anchor targets clear the sticky header
+    const syncHeaderHeight = () => {
+        document.documentElement.style.setProperty(
+            "--header-height",
+            `${header.offsetHeight}px`
+        );
+    };
+
+    syncHeaderHeight();
+    window.addEventListener("resize", syncHeaderHeight);
+    window.addEventListener("load", syncHeaderHeight);
+
+    // Re-align if the page is opened directly on a hash (layout settles late)
+    if (window.location.hash) {
+        window.addEventListener("load", () => {
+            const target = document.querySelector(window.location.hash);
+            if (target) {
+                target.scrollIntoView();
+            }
+        });
+    }
+
     // 4. Projects Category Filter & Accordion
     const filterButtons = document.querySelectorAll(".filter-btn");
     const projectAccordionItems = document.querySelectorAll(".project-accordion-item");
